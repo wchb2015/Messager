@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ProgressHUD
 
 class LoginViewController: UIViewController {
     
@@ -32,25 +33,115 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var repeatPasswordLineVew: UIView!
     
+    //MARK: - Vars
+    var isLogin: Bool = true
+    
    //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        updateUIFor(login: true)
+        setupTextFieldDelegates()
+        setupBackgroundTap()
+        
     }
 
     //MARK: - IBActions
     
     @IBAction func loginButtionPressed(_ sender: Any) {
+        if isDataInputedFor(type: isLogin ? "login" : "register" ){
+            // login or register
+            print("have data for login/register")
+        }else {
+            ProgressHUD.showFailed("All Fields are required")
+        }
     }
     
     @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: "password" ){
+            //reset password
+            print("reset password")
+        }else {
+            ProgressHUD.showFailed("Email is required")
+        }
     }
     
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
+        if isDataInputedFor(type: "password" ){
+        // resend Verification email
+        print("resend Verification email")
+        }else {
+          ProgressHUD.showFailed("Email is required")
+        }
     }
     
-    @IBAction func signUpButtonPressed(_ sender: Any) {
+    @IBAction func signUpButtonPressed(_ sender: UIButton) {
+        updateUIFor(login: sender.titleLabel?.text == "Login")
+        isLogin.toggle()
     }
     
+    
+    //MARKL: - Setup
+    private func setupTextFieldDelegates(){
+        emailTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        repeatPasswordTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField){
+        updatePlaceholderLabels(textField: textField)
+    }
+    
+    private func setupBackgroundTap(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backgroundTap))
+        
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func backgroundTap(){
+        view.endEditing(false)
+    }
+    
+    //MARK: - Animations
+    
+    private func updateUIFor(login: Bool){
+        loginButtonOutlet.setImage(UIImage(named: login ? "loginBtn" : "registerBtn"), for: .normal)
+        
+        signUpButtionOutlet.setTitle(login ? "SignUp" : "Login" , for: .normal)
+        
+        signUpLabel.text = login ? "Don't have an account?" : "Have an account"
+        
+        UIView.animate(withDuration: 0.5) {
+            self.repeatPasswordTextField.isHidden = login
+            self.repeatpasswordLabelOutlet.isHidden = login
+            self.repeatPasswordLineVew.isHidden = login
+        }
+    }
+    
+    private func updatePlaceholderLabels(textField: UITextField){
+        
+        switch textField {
+        case emailTextField:
+            emailLabelOutlet.text = textField.hasText ? "Email" : ""
+        case passwordTextField:
+            passwordLabelOutlet.text = textField.hasText ? "Password" : ""
+        default:
+            repeatpasswordLabelOutlet.text = textField.hasText ? "Repeat Password":""
+        }
+        
+    }
+    
+    
+    //MARK: - Helpers
+    private func isDataInputedFor(type: String) -> Bool {
+        switch type {
+        case "login":
+            return emailTextField.text != "" && passwordTextField.text != ""
+        case "register":
+            return emailTextField.text != "" && passwordTextField.text != "" && repeatPasswordTextField.text != ""
+        default:
+            return emailTextField.text != ""
+        }
+    }
 }
 
