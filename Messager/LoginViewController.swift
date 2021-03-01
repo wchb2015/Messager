@@ -36,7 +36,7 @@ class LoginViewController: UIViewController {
     //MARK: - Vars
     var isLogin: Bool = true
     
-   //MARK: - View LifeCycle
+    //MARK: - View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
         setupBackgroundTap()
         
     }
-
+    
     //MARK: - IBActions
     
     @IBAction func loginButtionPressed(_ sender: Any) {
@@ -60,6 +60,7 @@ class LoginViewController: UIViewController {
         if isDataInputedFor(type: "password" ){
             //reset password
             print("reset password")
+            resetPassword()
         }else {
             ProgressHUD.showFailed("Email is required")
         }
@@ -67,10 +68,11 @@ class LoginViewController: UIViewController {
     
     @IBAction func resendEmailButtonPressed(_ sender: Any) {
         if isDataInputedFor(type: "password" ){
-        // resend Verification email
-        print("resend Verification email")
+            // resend Verification email
+            print("resend Verification email")
+            resendVerificationEmail()
         }else {
-          ProgressHUD.showFailed("Email is required")
+            ProgressHUD.showFailed("Email is required")
         }
     }
     
@@ -144,7 +146,20 @@ class LoginViewController: UIViewController {
     }
     
     private func loginUser(){
-        
+        FirebaseUserListener.shared.loginUserWithEmail(email: emailTextField.text!, password: passwordTextField.text!){
+            (error,isEmailVerified) in
+            if error == nil {
+                if isEmailVerified {
+                    print("user has logged in with email ", User.currentUser?.email)
+                    self.goToApp()
+                } else {
+                    ProgressHUD.showFailed("Please verify email.")
+                    self.resendEmailButtonOutlet.isHidden = false
+                }
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+        }
     }
     
     private func registerUser(){
@@ -161,6 +176,35 @@ class LoginViewController: UIViewController {
         } else {
             ProgressHUD.showFailed("The password don't match")
         }
+    }
+    
+    private func resetPassword(){
+        FirebaseUserListener.shared.resetPasswordFor(email: emailTextField.text!) {
+            (error) in
+            
+            if error == nil {
+                ProgressHUD.showSuccess("Reset link sent to email.")
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+        }
+    }
+    
+    private func resendVerificationEmail(){
+        FirebaseUserListener.shared.resendVerificationEmail(email: emailTextField.text!) {
+            (error) in
+            
+            if error == nil {
+                 ProgressHUD.showSuccess("New verification email sent.")
+            } else {
+                ProgressHUD.showFailed(error!.localizedDescription)
+            }
+        }
+    }
+    
+    //MARK: - Navigation
+    private func goToApp(){
+        
     }
 }
 
