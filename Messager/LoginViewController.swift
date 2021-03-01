@@ -204,7 +204,10 @@ class LoginViewController: UIViewController {
     
     //MARK: - Navigation
     private func goToApp(){
+        let mainView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainView") as! UITabBarController
         
+        mainView.modalPresentationStyle = .fullScreen
+        self.present(mainView, animated: true, completion: nil)
     }
 }
 
