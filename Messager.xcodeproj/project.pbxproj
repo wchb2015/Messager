@@ -18,6 +18,7 @@
 		7F83448D25EC28DF00F6E654 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83448C25EC28DF00F6E654 /* Constants.swift */; };
 		7F83448F25EC29E000F6E654 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83448E25EC29E000F6E654 /* FCollectionReference.swift */; };
 		7F83449225EC2B8B00F6E654 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83449125EC2B8B00F6E654 /* FirebaseUserListener.swift */; };
+		7FBDBECE25F0530200FB3865 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */; };
 		7FEE8E4325EC20290027AAF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8E4225EC20290027AAF6 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		7F83448C25EC28DF00F6E654 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F83448E25EC29E000F6E654 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		7F83449125EC2B8B00F6E654 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
+		7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		7FEE8E4225EC20290027AAF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A758CCBCD6DCA8F97901896E /* Pods-Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.release.xcconfig"; path = "Target Support Files/Pods-Messager/Pods-Messager.release.xcconfig"; sourceTree = "<group>"; };
 		E5239B314AA59E9EF6BBEB39 /* Pods-Messager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.debug.xcconfig"; path = "Target Support Files/Pods-Messager/Pods-Messager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				7F280C2325E760260098F630 /* AppDelegate.swift */,
 				7F280C2525E760260098F630 /* SceneDelegate.swift */,
 				7F280C2725E760260098F630 /* LoginViewController.swift */,
+				7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */,
 				7F280C2925E760260098F630 /* Main.storyboard */,
 				7F83449025EC2B2600F6E654 /* FirebaseHelpers */,
 				7F83449325EC6EC200F6E654 /* Helper */,
@@ -250,6 +253,7 @@
 				7F83448D25EC28DF00F6E654 /* Constants.swift in Sources */,
 				7FEE8E4325EC20290027AAF6 /* User.swift in Sources */,
 				7F280C2825E760260098F630 /* LoginViewController.swift in Sources */,
+				7FBDBECE25F0530200FB3865 /* SettingsTableViewController.swift in Sources */,
 				7F280C2425E760260098F630 /* AppDelegate.swift in Sources */,
 				7F83449225EC2B8B00F6E654 /* FirebaseUserListener.swift in Sources */,
 				7F280C2625E760260098F630 /* SceneDelegate.swift in Sources */,
