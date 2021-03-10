@@ -47,9 +47,29 @@ class FileStorage {
         task.observe(StorageTaskStatus.progress){
                 (snapshot) in
                 let progress = snapshot.progress!.completedUnitCount / snapshot.progress!.totalUnitCount
-                
+                print("progress: " + "\(progress)")
                 ProgressHUD.showProgress(CGFloat(progress))
-            
         }
      }
+    
+    
+    //MARK: - Save Locally
+    class func saveFileLocally(fileData: NSData, fileName: String) {
+        let docUrl = getDocumentURL().appendingPathComponent(fileName,isDirectory: false)
+        fileData.write(to: docUrl, atomically: true)
+    }
+}
+
+//Helpers
+
+func fileInDocumentsDirectory(fileName: String) -> String {
+    return getDocumentURL().appendingPathComponent(fileName).path
+}
+
+func getDocumentURL() -> URL {
+    return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).last!
+}
+
+func fileExistsAtPath(path: String) -> Bool {
+    return FileManager.default.fileExists(atPath: fileInDocumentsDirectory(fileName: path))
 }
