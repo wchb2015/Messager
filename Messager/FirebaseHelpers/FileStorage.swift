@@ -43,12 +43,13 @@ class FileStorage {
             }
             
         })
-        
+ 
         task.observe(StorageTaskStatus.progress){
-                       (snapshot) in
-                       let progress = snapshot.progress!.completedUnitCount / snapshot.progress!.totalUnitCount
-                       print("progress " + "\(progress)")
-                       ProgressHUD.showProgress(CGFloat(progress))
+                (snapshot) in
+                let progress = snapshot.progress!.completedUnitCount / snapshot.progress!.totalUnitCount
+                
+                ProgressHUD.showProgress(CGFloat(progress))
+            
         }
-    }
+     }
 }
