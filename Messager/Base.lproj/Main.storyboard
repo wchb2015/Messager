@@ -453,6 +453,9 @@
                                                         <constraint firstAttribute="height" constant="30" id="l4V-5m-UQS"/>
                                                     </constraints>
                                                     <state key="normal" title="Edit"/>
+                                                    <connections>
+                                                        <action selector="editButtonPressed:" destination="TpV-N3-7nc" eventType="touchUpInside" id="iCu-mD-nji"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
