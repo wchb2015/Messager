@@ -15,6 +15,8 @@
 		7F280C2D25E760290098F630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F280C2C25E760290098F630 /* Assets.xcassets */; };
 		7F280C3025E760290098F630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F280C2E25E760290098F630 /* LaunchScreen.storyboard */; };
 		7F575BCD25E76B5B00E5A20D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F575BCC25E76B5B00E5A20D /* GoogleService-Info.plist */; };
+		7F65AE5E25FC443700D4B008 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65AE5D25FC443700D4B008 /* Status.swift */; };
+		7F65AE6025FC4A3500D4B008 /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */; };
 		7F83448D25EC28DF00F6E654 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83448C25EC28DF00F6E654 /* Constants.swift */; };
 		7F83448F25EC29E000F6E654 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83448E25EC29E000F6E654 /* FCollectionReference.swift */; };
 		7F83449225EC2B8B00F6E654 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83449125EC2B8B00F6E654 /* FirebaseUserListener.swift */; };
@@ -37,6 +39,8 @@
 		7F280C2F25E760290098F630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F280C3125E760290098F630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F575BCC25E76B5B00E5A20D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7F65AE5D25FC443700D4B008 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
 		7F83448C25EC28DF00F6E654 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F83448E25EC29E000F6E654 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		7F83449125EC2B8B00F6E654 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 				7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */,
 				7F280C2925E760260098F630 /* Main.storyboard */,
 				7F96414225F838AF007072C7 /* EditProfileTableViewController.swift */,
+				7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */,
 				7F83449025EC2B2600F6E654 /* FirebaseHelpers */,
 				7F83449325EC6EC200F6E654 /* Helper */,
 				7FEE8E4525EC20450027AAF6 /* Model */,
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				7FEE8E4225EC20290027AAF6 /* User.swift */,
+				7F65AE5D25FC443700D4B008 /* Status.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +276,8 @@
 				7F96414725F9AC61007072C7 /* GlobalFuncations.swift in Sources */,
 				7F96414925F9C414007072C7 /* Extensions.swift in Sources */,
 				7F96414325F838AF007072C7 /* EditProfileTableViewController.swift in Sources */,
+				7F65AE6025FC4A3500D4B008 /* StatusTableViewController.swift in Sources */,
+				7F65AE5E25FC443700D4B008 /* Status.swift in Sources */,
 				7F280C2425E760260098F630 /* AppDelegate.swift in Sources */,
 				7F83449225EC2B8B00F6E654 /* FirebaseUserListener.swift in Sources */,
 				7F280C2625E760260098F630 /* SceneDelegate.swift in Sources */,

@@ -13,4 +13,8 @@ let userDefaults = UserDefaults.standard
 
 public let kCURRENTUSER = "currentUser"
 
+public let kSTATUS = "status"
+
+public let kFIRSTRUN = "firstRun"
+
 public let kFILEREFERENCE = "gs://messager-e0001.appspot.com"

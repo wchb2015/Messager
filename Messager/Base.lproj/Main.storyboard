@@ -527,11 +527,41 @@
                         <outlet property="avatarImageView" destination="IU6-7A-EJe" id="fP7-99-EDc"/>
                         <outlet property="statusLabel" destination="B8T-ag-krU" id="fsb-zg-90H"/>
                         <outlet property="usernameTextField" destination="w5o-c0-PRh" id="HLx-tu-8mU"/>
+                        <segue destination="egs-aO-Ckv" kind="show" identifier="editProfileToStatusSeg" id="ovP-Gb-tZH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xay-JT-kAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1308.6956521739132" y="562.5"/>
+        </scene>
+        <!--Status-->
+        <scene sceneID="aGV-ZM-NsG">
+            <objects>
+                <tableViewController id="egs-aO-Ckv" customClass="StatusTableViewController" customModule="Messager" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rBm-Fu-u2x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="tableviewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yWc-aR-5HB">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yWc-aR-5HB" id="2AM-eS-fjJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="egs-aO-Ckv" id="Ib4-Ms-Rqe"/>
+                            <outlet property="delegate" destination="egs-aO-Ckv" id="KYb-er-b5U"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Status" id="fT3-Ng-79c"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ckx-Y1-mJ9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2079.7101449275365" y="562.5"/>
         </scene>
         <!--Chats-->
         <scene sceneID="Wax-4o-UzU">
