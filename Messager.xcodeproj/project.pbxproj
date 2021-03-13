@@ -21,6 +21,7 @@
 		7F96414325F838AF007072C7 /* EditProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96414225F838AF007072C7 /* EditProfileTableViewController.swift */; };
 		7F96414525F87E6E007072C7 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96414425F87E6E007072C7 /* FileStorage.swift */; };
 		7F96414725F9AC61007072C7 /* GlobalFuncations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96414625F9AC61007072C7 /* GlobalFuncations.swift */; };
+		7F96414925F9C414007072C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96414825F9C414007072C7 /* Extensions.swift */; };
 		7FBDBECE25F0530200FB3865 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */; };
 		7FEE8E4325EC20290027AAF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8E4225EC20290027AAF6 /* User.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		7F96414225F838AF007072C7 /* EditProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileTableViewController.swift; sourceTree = "<group>"; };
 		7F96414425F87E6E007072C7 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
 		7F96414625F9AC61007072C7 /* GlobalFuncations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuncations.swift; sourceTree = "<group>"; };
+		7F96414825F9C414007072C7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		7FEE8E4225EC20290027AAF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A758CCBCD6DCA8F97901896E /* Pods-Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.release.xcconfig"; path = "Target Support Files/Pods-Messager/Pods-Messager.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				7F83448C25EC28DF00F6E654 /* Constants.swift */,
+				7F96414825F9C414007072C7 /* Extensions.swift */,
 				7F96414625F9AC61007072C7 /* GlobalFuncations.swift */,
 			);
 			path = Helper;
@@ -265,6 +268,7 @@
 				7F280C2825E760260098F630 /* LoginViewController.swift in Sources */,
 				7FBDBECE25F0530200FB3865 /* SettingsTableViewController.swift in Sources */,
 				7F96414725F9AC61007072C7 /* GlobalFuncations.swift in Sources */,
+				7F96414925F9C414007072C7 /* Extensions.swift in Sources */,
 				7F96414325F838AF007072C7 /* EditProfileTableViewController.swift in Sources */,
 				7F280C2425E760260098F630 /* AppDelegate.swift in Sources */,
 				7F83449225EC2B8B00F6E654 /* FirebaseUserListener.swift in Sources */,
