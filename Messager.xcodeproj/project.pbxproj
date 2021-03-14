@@ -19,6 +19,7 @@
 		7F65AE6025FC4A3500D4B008 /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */; };
 		7F65AE6225FC85F500D4B008 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65AE6125FC85F500D4B008 /* UserTableViewCell.swift */; };
 		7F68D54725FD6F22002851B8 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F68D54625FD6F22002851B8 /* UsersTableViewController.swift */; };
+		7F68D54E25FDDCFD002851B8 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F68D54D25FDDCFD002851B8 /* ProfileTableViewController.swift */; };
 		7F83448D25EC28DF00F6E654 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83448C25EC28DF00F6E654 /* Constants.swift */; };
 		7F83448F25EC29E000F6E654 /* FCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83448E25EC29E000F6E654 /* FCollectionReference.swift */; };
 		7F83449225EC2B8B00F6E654 /* FirebaseUserListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F83449125EC2B8B00F6E654 /* FirebaseUserListener.swift */; };
@@ -45,6 +46,7 @@
 		7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
 		7F65AE6125FC85F500D4B008 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		7F68D54625FD6F22002851B8 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		7F68D54D25FDDCFD002851B8 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
 		7F83448C25EC28DF00F6E654 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7F83448E25EC29E000F6E654 /* FCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCollectionReference.swift; sourceTree = "<group>"; };
 		7F83449125EC2B8B00F6E654 /* FirebaseUserListener.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUserListener.swift; sourceTree = "<group>"; };
@@ -102,13 +104,12 @@
 			children = (
 				7F280C2325E760260098F630 /* AppDelegate.swift */,
 				7F280C2525E760260098F630 /* SceneDelegate.swift */,
-				7F280C2725E760260098F630 /* LoginViewController.swift */,
-				7F68D54625FD6F22002851B8 /* UsersTableViewController.swift */,
-				7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */,
+				7F68D54C25FDDCA5002851B8 /* MainViews */,
+				7F68D54F25FDDD0D002851B8 /* SecondaryViews */,
+				7F68D54B25FDDC8D002851B8 /* LoginViews */,
+				7F68D54825FDDC27002851B8 /* SettingsView */,
 				7F280C2925E760260098F630 /* Main.storyboard */,
-				7F96414225F838AF007072C7 /* EditProfileTableViewController.swift */,
-				7F65AE6125FC85F500D4B008 /* UserTableViewCell.swift */,
-				7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */,
+				7F68D54A25FDDC71002851B8 /* CustomeCell */,
 				7F83449025EC2B2600F6E654 /* FirebaseHelpers */,
 				7F83449325EC6EC200F6E654 /* Helper */,
 				7FEE8E4525EC20450027AAF6 /* Model */,
@@ -118,6 +119,48 @@
 				7F575BCC25E76B5B00E5A20D /* GoogleService-Info.plist */,
 			);
 			path = Messager;
+			sourceTree = "<group>";
+		};
+		7F68D54825FDDC27002851B8 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */,
+				7F96414225F838AF007072C7 /* EditProfileTableViewController.swift */,
+				7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		7F68D54A25FDDC71002851B8 /* CustomeCell */ = {
+			isa = PBXGroup;
+			children = (
+				7F65AE6125FC85F500D4B008 /* UserTableViewCell.swift */,
+			);
+			path = CustomeCell;
+			sourceTree = "<group>";
+		};
+		7F68D54B25FDDC8D002851B8 /* LoginViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F280C2725E760260098F630 /* LoginViewController.swift */,
+			);
+			path = LoginViews;
+			sourceTree = "<group>";
+		};
+		7F68D54C25FDDCA5002851B8 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F68D54625FD6F22002851B8 /* UsersTableViewController.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		7F68D54F25FDDD0D002851B8 /* SecondaryViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F68D54D25FDDCFD002851B8 /* ProfileTableViewController.swift */,
+			);
+			path = SecondaryViews;
 			sourceTree = "<group>";
 		};
 		7F83449025EC2B2600F6E654 /* FirebaseHelpers */ = {
@@ -280,6 +323,7 @@
 				7FEE8E4325EC20290027AAF6 /* User.swift in Sources */,
 				7F65AE6225FC85F500D4B008 /* UserTableViewCell.swift in Sources */,
 				7F280C2825E760260098F630 /* LoginViewController.swift in Sources */,
+				7F68D54E25FDDCFD002851B8 /* ProfileTableViewController.swift in Sources */,
 				7FBDBECE25F0530200FB3865 /* SettingsTableViewController.swift in Sources */,
 				7F96414725F9AC61007072C7 /* GlobalFuncations.swift in Sources */,
 				7F96414925F9C414007072C7 /* Extensions.swift in Sources */,
