@@ -10,6 +10,10 @@ class UsersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.refreshControl = UIRefreshControl()
+        self.tableView.refreshControl = self.refreshControl
+        
         //createDummyUsers()
         tableView.tableFooterView = UIView()
         setupSearchController()
@@ -32,6 +36,29 @@ class UsersTableViewController: UITableViewController {
         return cell
     }
     
+    //MARK: - TableViewDelegates
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let headerView = UIView()
+        headerView.backgroundColor = UIColor(named: "tableviewBackgroundColor")
+        
+        return headerView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        //TODO: show profile view
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
     
     //MARK: - DownloadUsers
     
@@ -63,6 +90,14 @@ class UsersTableViewController: UITableViewController {
         })
         
         tableView.reloadData()
+    }
+    
+    //MARK: - UIScrollViewDelegate
+    override func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if self.refreshControl!.isRefreshing {
+            self.downloadUsers()
+            self.refreshControl!.endRefreshing()
+        }
     }
 }
 
