@@ -14,6 +14,7 @@
 		7F280C2B25E760260098F630 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F280C2925E760260098F630 /* Main.storyboard */; };
 		7F280C2D25E760290098F630 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F280C2C25E760290098F630 /* Assets.xcassets */; };
 		7F280C3025E760290098F630 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F280C2E25E760290098F630 /* LaunchScreen.storyboard */; };
+		7F3E730526006B3A002F0152 /* RecentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F3E730426006B3A002F0152 /* RecentTableViewCell.swift */; };
 		7F575BCD25E76B5B00E5A20D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7F575BCC25E76B5B00E5A20D /* GoogleService-Info.plist */; };
 		7F65AE5E25FC443700D4B008 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65AE5D25FC443700D4B008 /* Status.swift */; };
 		7F65AE6025FC4A3500D4B008 /* StatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */; };
@@ -28,6 +29,7 @@
 		7F96414725F9AC61007072C7 /* GlobalFuncations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96414625F9AC61007072C7 /* GlobalFuncations.swift */; };
 		7F96414925F9C414007072C7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F96414825F9C414007072C7 /* Extensions.swift */; };
 		7FBDBECE25F0530200FB3865 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */; };
+		7FC85F2A260058FC0071930A /* RecentChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC85F29260058FC0071930A /* RecentChat.swift */; };
 		7FEE8E4325EC20290027AAF6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FEE8E4225EC20290027AAF6 /* User.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,7 @@
 		7F280C2C25E760290098F630 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F280C2F25E760290098F630 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7F280C3125E760290098F630 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F3E730426006B3A002F0152 /* RecentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentTableViewCell.swift; sourceTree = "<group>"; };
 		7F575BCC25E76B5B00E5A20D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7F65AE5D25FC443700D4B008 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		7F65AE5F25FC4A3500D4B008 /* StatusTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusTableViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +58,7 @@
 		7F96414625F9AC61007072C7 /* GlobalFuncations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalFuncations.swift; sourceTree = "<group>"; };
 		7F96414825F9C414007072C7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7FBDBECD25F0530200FB3865 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		7FC85F29260058FC0071930A /* RecentChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChat.swift; sourceTree = "<group>"; };
 		7FEE8E4225EC20290027AAF6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A758CCBCD6DCA8F97901896E /* Pods-Messager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.release.xcconfig"; path = "Target Support Files/Pods-Messager/Pods-Messager.release.xcconfig"; sourceTree = "<group>"; };
 		E5239B314AA59E9EF6BBEB39 /* Pods-Messager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Messager.debug.xcconfig"; path = "Target Support Files/Pods-Messager/Pods-Messager.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				7F65AE6125FC85F500D4B008 /* UserTableViewCell.swift */,
+				7F3E730426006B3A002F0152 /* RecentTableViewCell.swift */,
 			);
 			path = CustomeCell;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				7FEE8E4225EC20290027AAF6 /* User.swift */,
+				7FC85F29260058FC0071930A /* RecentChat.swift */,
 				7F65AE5D25FC443700D4B008 /* Status.swift */,
 			);
 			path = Model;
@@ -316,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC85F2A260058FC0071930A /* RecentChat.swift in Sources */,
 				7F83448F25EC29E000F6E654 /* FCollectionReference.swift in Sources */,
 				7F96414525F87E6E007072C7 /* FileStorage.swift in Sources */,
 				7F68D54725FD6F22002851B8 /* UsersTableViewController.swift in Sources */,
@@ -333,6 +340,7 @@
 				7F280C2425E760260098F630 /* AppDelegate.swift in Sources */,
 				7F83449225EC2B8B00F6E654 /* FirebaseUserListener.swift in Sources */,
 				7F280C2625E760260098F630 /* SceneDelegate.swift in Sources */,
+				7F3E730526006B3A002F0152 /* RecentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
